@@ -1,0 +1,705 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+:root {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: var(--grayscale-2);
+
+    --green-0: #53FEBE;
+    --green-1-faint: rgb(15, 146, 146);
+    --green-1: #068989;
+    --green-2: #083F37;
+    --red-1: #9C1733;
+    --red-2: #440307;
+    --red-2-faint: #85474B;
+    --grayscale-1: #FAFAFA;
+    --grayscale-2: #242424;
+
+    --light: 100;
+    --normal: 300;
+    --bold: 400;
+    --bolder: 700;
+    --boldest: 900;
+
+    --box-shadow: 2px 2px 4px rgba(0, 0, 0, 25%);
+    --box-shadow-expanded: 4px 4px 4px rgba(0, 0, 0, 25%);
+
+    scroll-behavior: smooth;
+}
+
+/* Overrides */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+}
+
+/* Text */
+
+a {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--red-1);
+}
+
+a.green {
+    color: var(--green-1);
+}
+
+a.green:hover {
+    color: var(--green-0);
+}
+
+h1 {
+    font-weight: var(--light);
+    font-size: 6rem;
+    letter-spacing: -0.1rem;
+
+    color: var(--green-2)
+}
+
+h2 {
+    font-weight: var(--light);
+    font-size: 3.75rem;
+    letter-spacing: -0.1rem;
+
+    color: var(--green-1);
+}
+
+h3 {
+    font-weight: var(--normal);
+    font-size: 2.125rem;
+
+    color: var(--green-1);
+}
+
+h4 {
+    font-weight: var(--bold);
+    font-size: 1.25rem;
+
+    color: var(--green-1);
+}
+
+h5 {
+    font-weight: var(--bold);
+    font-size: 1rem;
+
+    color: var(--grayscale-2);
+}
+
+p {
+    font-weight: var(--normal);
+    font-size: 1rem;
+
+    color: var(--grayscale-2);
+}
+
+/* Interactive */
+
+button:hover {
+    background-color: var(--red-1);
+}
+
+input[type="text"] {
+    width: 17.5rem;
+    height: 2.5rem;
+    padding: 0.6rem;
+    border: 1px solid var(--red-2);
+    border-radius: 4px;
+    color: var(--red-2-faint)
+}
+
+select {
+    width: 17.5rem;
+    height: 2.5rem;
+    padding: 0.6rem;
+    appearance: none;
+    border: 1px solid var(--red-2);
+    border-radius: 4px;
+    background-color: white;
+    color: var(--red-2);
+    background-image: url("../images/dropdown.svg");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem top 50%;
+    background-size: 1.5rem auto, 100%;
+}
+
+button {
+    padding: 0.375rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--red-2);
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    font-weight: var(--bold);
+    font-size: 0.875rem;
+    letter-spacing: 0.125rem;
+
+    display: block;
+}
+
+/* Content */
+
+section {
+    margin-bottom: 8rem;
+}
+
+section > p {
+    margin-bottom: 4rem;
+}
+
+section > h2 {
+    margin-bottom: 1rem;
+}
+
+section > h4 {
+    margin-bottom: 2rem;
+}
+
+.container {
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.quick-links {
+    display: flex;
+    justify-content: right;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+
+    padding: 1rem;
+    margin-bottom: 4rem;
+
+    width: 100%;
+
+    color: var(--red-2);
+}
+
+@media only screen and (max-width: 600px) {
+    .quick-links {
+        justify-content: center;
+    }
+}
+
+.quick-link {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.donate-button {
+    background-color: var(--green-1);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: white;
+}
+
+.header {
+    min-height: 30vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.forbes-logo {
+    width: 40rem;
+
+    margin-bottom: 4rem;
+}
+
+@media only screen and (max-width: 40rem) {
+    .forbes-logo {
+        width: 90vw;
+    }
+}
+
+.forbes-logo img {
+    width: 100%;
+}
+
+.search-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    margin-bottom: 1rem;
+}
+
+.view-results {
+    margin-bottom: 10rem;
+}
+
+.button-menu {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    background-color: white;
+
+    margin: 0 auto 4rem auto;
+
+    width: max-content;
+
+    border: 1px solid var(--red-2);
+    border-radius: 4px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    overflow: hidden;
+}
+
+.button-menu button {
+    display: none;
+
+    background-color: white;
+    border: none;
+    color: var(--red-2);
+}
+
+.button-menu a {
+    padding: 1rem;
+
+    background-color: white;
+    color: inherit;
+
+    border-radius: 0;
+
+    text-transform: uppercase;
+
+    font-weight: var(--bold);
+    font-size: 0.875rem;
+    letter-spacing: 0.125rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .button-menu {
+        width: 90%;
+        justify-content: center;
+    }
+
+    .button-menu button.show {
+        display: block;
+        flex-basis: 100%;
+    }
+
+    .button-menu button.show:focus ~ a {
+        display: block;
+    }
+
+    .button-menu button.show:focus {
+        display: none;
+    }
+
+    .button-menu button.show:focus ~ button.hide {
+        display: block;
+        flex-basis: 100%;
+    }
+
+    .button-menu a {
+        display: none;
+    }
+}
+
+
+.button-menu a.highlighted {
+    background-color: var(--red-2);
+    color: white;
+}
+
+.button-menu a:hover {
+    background-color: var(--red-1);
+    color: white;
+}
+
+.button-menu a.highlighted:hover {
+    background-color: var(--red-2);
+}
+
+.calendar-and-upcoming {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+
+    margin-bottom: 4rem;
+}
+
+.upcoming-events {
+    flex-basis: 50%;
+}
+
+.calendar img {
+    width: 100%;
+}
+
+.calendar > h4 {
+    margin-bottom: 2rem;
+}
+
+.upcoming-events > h4 {
+    margin-bottom: 2rem;
+}
+
+.upcoming-events-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.event-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    width: 17.5rem;
+
+    box-shadow: var(--box-shadow);
+
+    border-radius: 4px;
+
+    padding: 0.625rem;
+
+    cursor: pointer;
+
+    transition: transform 0.2s;
+}
+
+.event-card:hover {
+    box-shadow: var(--box-shadow-expanded);
+
+    background-color: var(--grayscale-1);
+
+    transform: scale(105%);
+}
+
+.event-card i {
+    position: absolute;
+
+    top: 0.5rem;
+    right: 0.5rem;
+
+    display: none;
+
+    color: var(--green-1);
+}
+
+.event-card:hover i {
+    display: block;
+}
+
+.event-card:hover .event-card-title {
+    display: none;
+}
+
+.event-card:hover .event-card-description {
+    display: block;
+    vertical-align: center;
+}
+
+.event-card-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-card-date h3 {
+    text-transform: uppercase;
+    font-weight: var(--bold);
+}
+
+.event-card-description {
+    display: none;
+}
+
+.event-categories-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.image-card {
+    position: relative;
+
+    width: 17.5rem;
+    height: 16.25rem;
+
+    background-color: white;
+    border-radius: 4px;
+
+    box-shadow: var(--box-shadow);
+
+    overflow: hidden;
+
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.image-card:hover {
+    background-color: var(--grayscale-1);
+    box-shadow: var(--box-shadow-expanded);
+    transform: scale(103%);
+}
+
+.image-card:hover .image-card-description {
+    display: block;
+}
+
+.image-card:hover .image-card-title {
+    display: none;
+}
+
+.image-card-image {
+    position: relative;
+
+    height: 11.5rem;
+
+    overflow: hidden;
+}
+
+.image-card-image img {
+    width: 100%;
+
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.image-card-text {
+    display: flex;
+    align-items: center;
+
+    height: 4.75rem;
+
+    padding: 1rem;
+}
+
+.image-card-description {
+    display: none;
+}
+
+.image-card i {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+
+    z-index: 10;
+
+    font-size: 2rem;
+    color: var(--green-1);
+
+    display: none;
+}
+
+.image-card:hover i {
+    display: block;
+}
+
+.program-cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.bnm-image-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin-bottom: 4rem;
+}
+.picks-container {
+    display: flex;
+}
+
+.pick-container {
+    flex-basis: 50%;
+}
+
+.pick-container > h4 {
+    margin-bottom: 2rem;
+}
+
+.pick-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pick {
+    position: relative;
+
+    width: 10rem;
+    height: 10rem;
+
+    border-radius: 4px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    box-shadow: var(--box-shadow);
+
+    transition: transform 0.2s;
+}
+
+.pick:hover {
+    box-shadow: var(--box-shadow-expanded);
+
+    transform: scale(105%);
+}
+
+.pick:hover i {
+    display: block;
+}
+
+.pick i {
+    position: absolute;
+    display: none;
+
+    top: 0.25rem;
+    right: 0.25rem;
+
+    color: var(--green-0);
+}
+
+.pick img {
+    width: 100%;
+}
+
+.exhibit-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.large-image-card {
+    position: relative;
+    display: flex;
+
+    width: 37.5rem;
+    height: 17.5rem;
+
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition: transform 0.2s;
+}
+
+.large-image-card:hover {
+    background-color: var(--grayscale-1);
+    box-shadow: var(--box-shadow-expanded);
+
+    transform: scale(102%);
+}
+
+.large-image-card i {
+    display: none;
+    position: absolute;
+    z-index: 10;
+
+    top: 0.5rem;
+    right: 0.5rem;
+
+    color: var(--green-1);
+
+    font-size: 2rem;
+}
+
+.large-image-card:hover i {
+    display: block;
+}
+
+.large-image-card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-basis: 40%;
+
+    overflow: hidden;
+}
+
+.large-image-card-image img {
+    height: 100%;
+}
+
+.large-image-card-text {
+    flex-basis: 60%;
+
+    padding: 1rem;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 2rem;
+
+    background-color: var(--red-2);
+}
+
+@media only screen and (max-width: 650px) {
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+footer div {
+    flex-basis: 50%;
+}
+
+footer p {
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+footer i {
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 2rem;
+}
+
+.social-icons i {
+    cursor: pointer;
+}
+
+.footer-donate {
+    display: flex;
+    justify-content: center;
+}
