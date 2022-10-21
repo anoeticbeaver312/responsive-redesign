@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700&display=swap');
+
+:root {
+    font-family: 'Inter', sans-serif;
+    font-size: 100%;
+
+    --purple-1: #7543E3;
+    --purple-2: #321C64;
+
+    --grayscale-1: #fafafa;
+    --grayscale-2: #242424;
+
+    --light: 100;
+    --normal: 300;
+    --bold: 500;
+    --bolder: 700;
+
+    color: var(--grayscale-2);
+}
+
+/* Overrides */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+}
+
+/* Typography */
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+
+    color: var(--purple-2);
+}
+
+a:hover {
+    color: var(--purple-1);
+}
+
+h1 {
+    font-weight: var(--light);
+    font-size: 6rem;
+    letter-spacing: -0.1rem;
+
+    color: var(--purple-2)
+}
+
+h2 {
+    font-weight: var(--light);
+    font-size: 3.75rem;
+    letter-spacing: -0.1rem;
+
+    color: var(--purple-1);
+}
+
+h3 {
+    font-weight: var(--normal);
+    font-size: 2.125rem;
+
+    color: var(--purple-1);
+}
+
+h4 {
+    font-weight: var(--bold);
+    font-size: 1.25rem;
+
+    color: var(--purple-1);
+}
+
+h5 {
+    font-weight: var(--bold);
+    font-size: 1rem;
+}
+
+p {
+    font-weight: var(--normal);
+    font-size: 1rem;
+}
+
+/* Content */
+
+.top-links {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    display: flex;
+    gap: 2rem;
+}
+
+.top-links a {
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    background-color: var(--purple-2);
+    color: white;
+
+    transition: transform 0.2s;
+}
+
+.top-links a:hover {
+    background-color: var(--purple-1);
+
+    transform: scale(105%);
+}
+
+main {
+    width: 100%;
+    padding: clamp(2rem, 10%, 10rem)
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 50vh;
+    min-height: 50rem;
+}
+
+hr {
+    border: 1px solid var(--purple-1);
+    width: 50%;
+
+    margin-bottom: 2rem;
+}
+
+.annotated-image {
+    display: flex;
+    justify-content: center;
+}
+
+.annotated-image img {
+    max-height: 100vh;
+    max-width: 100%;
+}
