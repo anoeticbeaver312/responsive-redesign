@@ -2,22 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Responsive Redesign</title>
+    <title>🦫 Responsive Redesign</title>
     <script src="https://kit.fontawesome.com/1a7d52bba6.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="main.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 <body>
-<div class="top-links">
-    <a href="https://forbeslibrary.org" class="og-site" target="_blank"><i class="fa fa-link"></i> Original Site</a>
-    <a href="https://anoeticbeaver312.github.io/responsive-redesign" class="redesigned-site" target="_blank"><i class="fa fa-link"></i> Redesigned
-        Site</a>
-</div>
 <main>
     <header>
         <div>
+
             <h1>Responsive Redesign: Forbes Library</h1>
             <h2>by Anoetic Beaver 🦫</h2>
+        </div>
+        <div class="top-links">
+            <a href="https://forbeslibrary.org" class="og-site" target="_blank"><i class="fa fa-link"></i> Original
+                Site</a>
+            <a href="/site" class="redesigned-site" target="_blank"><i class="fa fa-link"></i> Redesigned
+                Site</a>
         </div>
     </header>
     <section>
@@ -27,15 +29,362 @@
             <a href="https://forbeslibrary.org">Forbes Library</a> is Northampton, Massachusetts’ main public library,
             located centrally in downtown. Apart from providing books and other media to the public, it also provides
             other community resources and services like
-            hosting events. <strong>I chose this site to redesign because, especially in an increasingly virtual world, public
-            libraries should provide simple, clean, and straightforward interfaces for people to interact with online.</strong> I
+            hosting events. <strong>I chose this site to redesign because, especially in an increasingly virtual world,
+            public
+            libraries should provide simple, clean, and straightforward interfaces for people to interact with
+            online.</strong> I
             have identified several ways in which the existing Forbes site fails to do this, which I will discuss below.
         </p>
-        <div class="annotated-image">
-            <figure>
-            <img src="annotated.png" alt="Annotated Site Screenshot" />
-               <figcaption>Forbes Library Website — Annotated</figcaption>
-            </figure>
+        <!--        <div class="image-container" id="annotated-image">-->
+        <!--            <figure>-->
+        <!--                <img src="images/annotated.png" alt="Annotated Site Screenshot"/>-->
+        <!--                <figcaption>Forbes Library Website — Annotated</figcaption>-->
+        <!--            </figure>-->
+        <!--        </div>-->
+    </section>
+    <section>
+        <h3>Usability Problems</h3>
+        <hr>
+        <p>
+            Please refer to the annotations on the <a href="#annotated-image"><i class="fa fa-link"></i> image</a> above
+            for the sections of the website I specify by number.
+        </p>
+        <br>
+        <h4 id="usability">USABILITY</h4>
+        <br>
+        <p>The following are usability problems I found with the Forbes site.</p>
+        <br>
+        <ul>
+            <li>
+                <strong>Inconsistency in buttons:</strong> the site uses inconsistent styles for buttons, varying by
+                size, color, shape, font, etc. (1, 2, 6, 9).
+                <ul>
+                    <li>
+                        1 — small, but nicely styled
+                    </li>
+                    <li>
+                        2 — searchbar looks out of place, and is too small
+                    </li>
+                    <li>
+                        6 — is this even a button?
+                    </li>
+                    <li>
+                        9 — are there two functions here? Nowhere else is an icon used as a button.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Unclear hierarchy:</strong> it’s hard to know what to focus on, since some elements are smaller
+                than expected and others are larger than expected. Furthermore, content is laid out in three columns,
+                where hierarchy is unclear. Finally, there are many visual elements that don’t serve a functional
+                purpose — hard to differentiate which are functional and which aesthetic.
+                <ul>
+                    <li>1 — smaller than expected, with little to make it jump out</li>
+                    <li>2 — very small for such a useful feature, especially on a cluttered site</li>
+                    <li>5 — small for such a useful feature, without its own heading</li>
+                    <li>10 — small and squeezed awkwardly to the side and down the page</li>
+                    <li>6 — larger than expected, could be at the top</li>
+                    <li>8 — way larger than expected, what’s its purpose?</li>
+                    <li>4 — what is this section?</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Busy and cluttered:</strong> although the core design is fairly minimalist, a lot of content is
+                squeezed into a small amount of space, without clear hierarchy between what one should focus on first
+                <ul>
+                    3 — I feel overwhelmed as a user when I look at the menu links; too many!!
+                </ul>
+            </li>
+            <li>
+                <strong>Unclear interaction cues:</strong> it’s unclear which elements are clickable, since button
+                styles are inconsistent. E.g., are the images on the left clickable? What will happen if I click them?
+                <ul>
+                    <li>
+                        4 — this image has a caption, but the others don’t, is there a difference in clickability?
+                    </li>
+                    <li>
+                        7 — these are just images, but are they clickable? Turns out, the whole section is a link.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>User state:</strong> there is no indication whether the user is logged in or not. In this case,
+                they are not, but there is no warning to that effect.
+                <ul>
+                    <li>
+                        1 — ”my account” does not warn me that I do not have a logged in account
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Nesting:</strong> menu items have many nested items, making it hard to find exactly what I want
+            </li>
+        </ul>
+        <br>
+        <h4>LEARNABILITY</h4>
+        <br>
+        <p>
+            The following are issues I found with learnability, i.e., difficulty the user might face in forming an
+            effective mental model of the site.
+        </p>
+        <br>
+        <ul>
+            <li>
+                <strong>Lack of journey guardrails:</strong> where is the starting place, and where should you go from
+                there? What’s the expected flow? Since almost all content appears in the initial view, and combined with
+                confusing hierarchy, hard to tell.
+            </li>
+            <li>
+                <strong>Lack of clear modules:</strong> a lack of clear hierarchy and differentiation of functional and
+                non-functional elements makes it hard to learn the steps required for a certain task. Needs a clear
+                demarcation of which sections of the site serve which purpose.
+                <ul>
+                    <li>
+                        1 — a good example of modularity, because I can see some quickly accessible, clearly demarcated
+                        sections of the site where I might go to get information or do things
+                    </li>
+                    <li>
+                        2 — too small to be highly noticeable, and does not have clear demarcation between searching the
+                        website and searching for books. Why are these the two options, instead of searching events, for
+                        instance?
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Inconsistency:</strong> inconsistency of design makes it hard to learn how to interact with
+                different elements
+                <ul>
+                    <li>(See <a href="#usability"><i class="fa fa-link"></i> above</a>)</li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+        <h4>MEMORABILITY</h4>
+        <br>
+        <p>
+            The following are issues I found with memorability, i.e., how easily the user can figure out and remember
+            the steps necessary to complete a particular task.
+        </p>
+        <br>
+        <ul>
+            <li>
+                <strong>No site map:</strong> very hard to visualize the layout of the site, since there’s no clear
+                structure (events, books, galleries, etc., where are they??)
+                <ul>
+                    <li>
+                        3 — how are these tabs organized, which ones lead to different pages?
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Headers:</strong> on just the main page, there are inconsistent uses of headers to define
+                sections, which makes it hard to remember which sections have which content
+                <ul>
+                    <li>
+                        4 — what’s this section?
+                    </li>
+                    <li>
+                        5 — no header, fails to stand out
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h3>Conceptual Model</h3>
+        <hr>
+        <p>
+            How does a user conceptualize a public library’s website? In the absence of real user research, I’ll make
+            some assumptions about the purposes a user has in using the site, and how they therefore conceptualize the
+            site’s functionality and content.
+        </p>
+        <br>
+        <h4>USER GOALS</h4>
+        <br>
+        <p>A user might have the following goals in visiting a public library website:</p>
+        <ol>
+            <li>
+                View the library’s catalog of books and other media, and reserve one or more items, either from this
+                library or another one.
+            </li>
+            <li>
+                View upcoming community events.
+            </li>
+            <li>
+                Explore the library’s archives and databases.
+            </li>
+            <li>
+                View current gallery/museum content and offerings.
+            </li>
+            <li>
+                Check quick facts like hours, COVID-19 policies, return policy, etc.
+            </li>
+        </ol>
+        <br>
+        <h4>EXPECTED FLOW</h4>
+        <br>
+        <p>
+            Given these goals and given the current design of the site’s home page, a user might construct the following
+            mental model:
+        </p>
+        <ol>
+            <li>
+                Check (1) for login and quick links
+            </li>
+            <li>
+                Jump to (3.5) because of size, check for quick functions, don’t find any of my core goals
+            </li>
+            <li>
+                Scan (3) for what I’m looking for
+            </li>
+            <li>
+                Sweep rest of the content, checking for expected functionality
+            </li>
+            <li>
+                Notice (2) and do raw search for function or content, or search catalog
+            </li>
+            <li>
+                Eventually notice (5) and click through, likely don’t use
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h3>Accessibility</h3>
+        <hr>
+        <p>
+            The following are accessibility problems found by <a
+                href="https://wave.webaim.org/report#/https://forbeslibrary.org/" target="_blank"><i
+                class="fa fa-link"></i> WAVE</a>
+        </p>
+        <ol>
+            <li>
+                <strong>Empty header tag</strong> → WAVE finds three instances of empty headers.
+                <ul>
+                    <li>This is a real issue, since it will lead to confusion when using screen readers.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Ambiguous link text →</strong> WAVE finds that four links have ambiguous text.
+                <ul>
+                    <li>
+                        For instance, one link simply says “more,” which, when read out of context, would have no
+                        meaning to a visually impaired user.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Device-dependent handlers →</strong> WAVE finds two instances of device-dependent handlers,
+                where only mouse events are handled.
+                <ul>
+                    <li>
+                        This matters for mobile users, and might make certain parts of the site completely unusable. It
+                        also belies a lack of attention to mobile devices in general, which might hint at other issues
+                        that arise on mobile.
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h3>Planned Changes</h3>
+        <hr>
+        <p>Given the problems identified and the expected conceptual model, I plan on making the following changes:</p>
+        <br>
+        <ul>
+            <li>
+                Increase consistency with a consolidated style guide.
+            </li>
+            <li>
+                Divide content into clear sections, organized by which user goal they serve:
+                <ul>
+                    <li>
+                        Quick links/actions
+                        <ul>
+                            <li>Account</li>
+                            <li>Hours</li>
+                            <li>Contact</li>
+                            <li>Accessibility</li>
+                            <li>Donate</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Search and browse
+                        <ul>
+                            <li>Books and other media</li>
+                            <li>Archives and databases</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Events
+                        <ul>
+                            <li>Calendar</li>
+                            <li>Upcoming events</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Programs
+                    </li>
+                    <li>
+                        Exhibits and attractions
+                    </li>
+                    <li>
+                        About the library
+                    </li>
+                </ul>
+            </li>
+            <li>Remove side columns to simplify layout</li>
+            <li>Add clear interaction icons, particularly for images</li>
+            <li>Add login state</li>
+            <li>Add headers for each section to clearly define demarcation</li>
+        </ul>
+    </section>
+    <section>
+        <h3>Low-fidelity Prototypes</h3>
+        <hr>
+        <p>To begin designing, I created three low-fidelity prototypes.</p>
+        <br>
+        <div class="image-container-multiple">
+            <div>
+                <h4>DESKTOP</h4>
+                <img src="images/desktop-lofi.png" alt="Desktop Lofi Prototype"/>
+            </div>
+            <div>
+                <h4>TABLET</h4>
+                <img src="images/tablet-lofi.png" alt="Tablet Lofi Prototype"/>
+            </div>
+            <div>
+                <h4>MOBILE</h4>
+                <img src="images/mobile-lofi.png" alt="Mobile Lofi Prototype"/>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h3>Design System</h3>
+        <hr>
+        <p>The design system I created for this project.</p>
+        <br>
+        <div class="image-container">
+            <img src="images/design-system.png" alt="Design System"/>
+        </div>
+    </section>
+    <section>
+        <h3>High-fidelity Prototypes</h3>
+        <hr>
+        <p>Using my design system, I created the following three high-fidelity prototypes.</p>
+        <br>
+        <div class="image-container-multiple">
+            <div>
+                <h4>DESKTOP</h4>
+                <img src="images/Desktop.png" alt="Desktop High-fidelity Prototype"/>
+            </div>
+            <div>
+                <h4>TABLET</h4>
+                <img src="images/Tablet.png" alt="Tablet High-fidelity Prototype"/>
+            </div>
+            <div>
+                <h4>DESKTOP</h4>
+                <img src="images/Mobile.png" alt="Mobile High-fidelity Prototype"/>
+            </div>
         </div>
     </section>
 </main>
