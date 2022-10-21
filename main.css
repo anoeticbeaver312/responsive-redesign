@@ -2,7 +2,7 @@
 
 :root {
     font-family: 'Inter', sans-serif;
-    font-size: 100%;
+    font-size: 120%;
 
     --purple-1: #7543E3;
     --purple-2: #321C64;
@@ -16,6 +16,8 @@
     --bolder: 700;
 
     color: var(--grayscale-2);
+
+    scroll-behavior: smooth;
 }
 
 /* Overrides */
@@ -23,7 +25,6 @@
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
 }
 
 img, picture, video, canvas, svg {
@@ -47,6 +48,8 @@ h1 {
     font-weight: var(--light);
     font-size: 6rem;
     letter-spacing: -0.1rem;
+
+    text-wrap: normal;
 
     color: var(--purple-2)
 }
@@ -78,7 +81,7 @@ h5 {
     font-size: 1rem;
 }
 
-p {
+p, li {
     font-weight: var(--normal);
     font-size: 1rem;
 }
@@ -86,10 +89,6 @@ p {
 /* Content */
 
 .top-links {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-
     display: flex;
     gap: 2rem;
 }
@@ -111,7 +110,7 @@ p {
 
 main {
     width: 100%;
-    padding: clamp(2rem, 10%, 10rem)
+    padding: 0 clamp(2rem, 10%, 10rem);
 }
 
 header {
@@ -120,8 +119,7 @@ header {
     align-items: center;
     justify-content: center;
 
-    height: 50vh;
-    min-height: 50rem;
+    padding: 5rem 0;
 }
 
 hr {
@@ -131,12 +129,44 @@ hr {
     margin-bottom: 2rem;
 }
 
-.annotated-image {
-    display: flex;
-    justify-content: center;
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
 }
 
-.annotated-image img {
+.image-container {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    overflow-x: scroll;
+}
+
+.image-container img {
     max-height: 100vh;
-    max-width: 100%;
+}
+
+.image-container-multiple {
+    display: flex;
+    justify-content: left;
+    overflow: scroll;
+    gap: 2rem;
+
+    border: 3px solid var(--purple-1);
+
+    padding: 1rem;
+}
+
+.image-container-multiple img {
+    max-height: 100vh;
+}
+
+section {
+    margin-bottom: 1rem;
 }
